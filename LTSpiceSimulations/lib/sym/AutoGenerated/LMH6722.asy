@@ -1,0 +1,23 @@
+Version 4
+SymbolType BLOCK
+RECTANGLE Normal -32 -48 96 48
+WINDOW 0 0 -56 Bottom 2
+WINDOW 3 32 50 Top 2
+SYMATTR Prefix X
+SYMATTR Value LMH6722
+SYMATTR ModelFile "C:\Users\roman.heinrich.WITRICITY\AppData\Local\LTspice\lib_TI\Opamps\LMH6722.mod"
+PIN -32 -16 LEFT 8
+PINATTR PinName IN+
+PINATTR SpiceOrder 1
+PIN -32 16 LEFT 8
+PINATTR PinName IN-
+PINATTR SpiceOrder 2
+PIN 96 -32 RIGHT 8
+PINATTR PinName VCC
+PINATTR SpiceOrder 3
+PIN 96 32 RIGHT 8
+PINATTR PinName VEE
+PINATTR SpiceOrder 4
+PIN 96 0 RIGHT 8
+PINATTR PinName OUT
+PINATTR SpiceOrder 5

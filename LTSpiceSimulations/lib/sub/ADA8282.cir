@@ -1,0 +1,106 @@
+*ADA8282 Macro-model
+*Function: Radar AFE
+*
+*Revision History:
+*Rev.1 Jul 2015-KF
+*Copyright 2015 by Analog Devices
+*
+*Refer to http://www.analog.com/Analog_Root/static/techSupport/designTools/spicemodels/license
+*for License Statement. Use of this model indicates your acceptance
+*of the terms and provisions in the License Staement.
+*
+*Tested on MultisIm, SiMetrix, PSpice
+*
+*This model was created for the purposes of simulating functionality only. 
+*Parameters modeled include:
+*  Output Voltage Swing
+*  Bandwidth
+*  Functionality at 36dB gain
+*  Supply current
+*
+*If a more comprehensive model is needed, please contact customer support.
+*
+*Node Assignments
+*                 Analog Supply
+*                 |   Digital Supply
+*                 |   |   Pos Input
+*                 |   |   |   Neg Input
+*                 |   |   |   |     Pos Output
+*                 |   |   |   |     |      Neg Output
+*                 |   |   |   |     |      |      Ground
+*                 |   |   |   |     |      |      |
+.Subckt ADA8282 AVDD VIO IN+ IN- PGAOUT+ PGAOUT- AGND
+*
+
+EV17 LNAOUT+ 0 LNAOUT+_1 0 1
+EV18 LNAOUT- 0 LNAOUT-_1 0 1
+EV4 10 0 IN- 0 1
+C2 LNAOUT+_1 0 1.81e-009
+V10 AVDD 18 dc 0.85
+D4 LNAOUT+_1 18 DIODE
+D5 19 LNAOUT+_1 DIODE
+V11 19 0 dc 0.85
+V8 AVDD 17 dc 0.85
+D2 LNAOUT-_1 17 DIODE
+D1 13 LNAOUT-_1 DIODE
+V3 13 0 dc 0.85
+C5 LNAOUT+_1 4 1.75e-005
+R18 15 IN+ 800
+EV7 15 0 VMID 0 1
+EV6 2 0 IN+ 0 1
+R17 11 IN- 800
+EV5 11 0 VMID 0 1
+C4 0 LNAOUT-_1 1.81e-009
+R9 LNAOUT-_1 0 1000000 
+R8 0 LNAOUT+_1 1000000 
+GI3 0 LNAOUT-_1 VMID 5 1e-006
+GI2 0 LNAOUT+_1 VMID 4 1e-006
+C6 LNAOUT-_1 5 1.75e-005
+R3 2 3 800 
+R5 10 9 800
+R4 LNAOUT-_1 9 12800
+R2 3 LNAOUT+_1 12800
+R1 5 4 1000000000
+GI1 5 4 9 3 1
+I9 AVDD 0 dc 0.0086
+R24 16 PGAOUT+ 0.001
+R23 29 PGAOUT- 0.001
+R25 0 5 100000000 
+R26 0 8 100000000 
+C12 12 0 2.4e-012
+R22 0 12 1000
+GI8 0 12 26 0 0.001
+C7 26 0 1e-009
+R15 0 26 1000000 
+GI5 0 26 VMID 7 1e-006
+C11 0 23 2.4e-012
+R21 23 0 1000 
+GI7 0 23 14 0 0.001
+C8 0 14 1e-009
+R16 14 0 1000000  
+GI6 0 14 VMID 8 1e-006
+EV20 29 0 23 0 1
+EV19 16 0 12 0 1
+V14 AVDD 24 dc 0.87
+D8 12 24 DIODE
+D7 22 12 DIODE
+V13 22 0 dc 0.87
+V12 AVDD 21 dc 0.87
+D6 23 21 DIODE
+D3 20 23 DIODE
+V9 20 0 dc 0.87
+C10 23 8 1.75e-006
+C9 12 7 1.75e-006
+R14 LNAOUT- 1 1000 
+R13 23 1 4000  
+R12 LNAOUT+ 6 1000  
+R11 6 12 4000  
+R10 8 7 1000000  
+GI4 8 7 1 6 1
+R7 VMID AGND 200000  
+R6 AVDD VMID 200000 
+I10 VIO 0 dc 1e-005
+
+.model DIODE  D
+.ENDS
+

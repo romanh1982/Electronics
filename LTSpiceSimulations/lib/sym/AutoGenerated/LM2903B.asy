@@ -1,0 +1,23 @@
+Version 4
+SymbolType BLOCK
+RECTANGLE Normal -64 -56 64 56
+WINDOW 0 -34 -83 Bottom 2
+WINDOW 3 -5 -83 Top 2
+SYMATTR Prefix X
+SYMATTR Value LM2903B
+SYMATTR ModelFile C:\Users\roman.heinrich.WITRICITY\AppData\Local\LTspice\lib_TI\Comporators\tl331.lib
+PIN -64 -32 LEFT 8
+PINATTR PinName IN+
+PINATTR SpiceOrder 1
+PIN -64 0 LEFT 8
+PINATTR PinName IN-
+PINATTR SpiceOrder 2
+PIN 64 -48 RIGHT 8
+PINATTR PinName Vcc
+PINATTR SpiceOrder 3
+PIN 64 32 RIGHT 8
+PINATTR PinName GND
+PINATTR SpiceOrder 4
+PIN 64 -16 RIGHT 8
+PINATTR PinName OUT
+PINATTR SpiceOrder 5

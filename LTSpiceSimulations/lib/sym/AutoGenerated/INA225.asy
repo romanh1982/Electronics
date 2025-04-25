@@ -1,0 +1,32 @@
+Version 4
+SymbolType BLOCK
+RECTANGLE Normal -64 -72 64 72
+WINDOW 0 0 -72 Bottom 2
+SYMATTR Prefix X
+SYMATTR Value INA225
+SYMATTR ModelFile C:\Users\roman.heinrich.WITRICITY\AppData\Local\LTspice\lib_TI\Instrumentation_Amplifiers\INA225.lib
+WINDOW 3 0 72 Top 2
+PIN -64 -48 LEFT 8
+PINATTR PinName IN+
+PINATTR SpiceOrder 1
+PIN -64 -16 LEFT 8
+PINATTR PinName IN-
+PINATTR SpiceOrder 2
+PIN -64 16 LEFT 8
+PINATTR PinName VS
+PINATTR SpiceOrder 3
+PIN -64 48 LEFT 8
+PINATTR PinName GND
+PINATTR SpiceOrder 4
+PIN 64 -48 RIGHT 8
+PINATTR PinName REF
+PINATTR SpiceOrder 5
+PIN 64 -16 RIGHT 8
+PINATTR PinName GS1
+PINATTR SpiceOrder 6
+PIN 64 16 RIGHT 8
+PINATTR PinName GS0
+PINATTR SpiceOrder 7
+PIN 64 48 RIGHT 8
+PINATTR PinName OUT
+PINATTR SpiceOrder 8

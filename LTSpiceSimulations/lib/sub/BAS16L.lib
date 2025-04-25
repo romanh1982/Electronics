@@ -1,0 +1,21 @@
+*  Model for Vishay Schottky Diode                                          
+*             BAS16L
+*  model is valid for TNOM=27GRD, RS without heating, maximum forward current If=100mA and maximum reverse current Irev=2mA                                     
+*                                                                         
+*  VISHAY Semiconductor GmbH                                               
+*  CM                      Jan 2021              
+*                                                                         
+*  Copyright:                                      
+*  Vishay Intertechnology, Inc.                                   
+*                                                                         
+*                                                                         
+.SUBCKT BAS16L a c
+*	
+Df a c	D1
+Dr a c  D2
+C a c	0.2p
+.MODEL D1 D(IS=2.0n N=1.8 ISR=1.5n NR=2.3 IKF=33m RS=0.12 CJO=0.17p M=0.085 VJ=0.48
++BV=150 IBV=10u NBV=1 EG=1.15 XTI=2 TT=4n)
+.MODEL D2 D(IS=1e-18 N=5 ISR=1n NR=4 RS=1e6 XTI=50)
+*	
+.ENDS BAS16L                                                         

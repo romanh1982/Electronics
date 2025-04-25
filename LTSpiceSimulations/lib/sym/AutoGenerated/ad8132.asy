@@ -1,0 +1,29 @@
+Version 4
+SymbolType BLOCK
+RECTANGLE Normal -48 -80 97 112
+WINDOW 0 25 -83 Bottom 2
+WINDOW 3 25 111 Top 2
+SYMATTR Value ad8132
+SYMATTR Prefix X
+SYMATTR ModelFile "C:\Users\roman.heinrich.WITRICITY\AppData\Local\LTspice\lib_analog_devices\AD8132.cir"
+PIN -48 -32 LEFT 8
+PINATTR PinName IN+
+PINATTR SpiceOrder 1
+PIN -48 64 LEFT 8
+PINATTR PinName IN-
+PINATTR SpiceOrder 2
+PIN 96 -64 RIGHT 8
+PINATTR PinName V+
+PINATTR SpiceOrder 3
+PIN 96 96 RIGHT 8
+PINATTR PinName V-
+PINATTR SpiceOrder 4
+PIN 96 64 RIGHT 8
+PINATTR PinName -Out
+PINATTR SpiceOrder 5
+PIN 96 -32 RIGHT 8
+PINATTR PinName +Out
+PINATTR SpiceOrder 6
+PIN 96 16 RIGHT 8
+PINATTR PinName Vocm
+PINATTR SpiceOrder 7

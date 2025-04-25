@@ -1,0 +1,2 @@
+.meas TRAN Irms_R11 RMS I(R11)*1e6
+.meas TRAN Vmean_cblock AVG V(cblock)
