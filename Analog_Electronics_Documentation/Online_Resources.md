@@ -1,5 +1,5 @@
 
-# 📘 Understanding Temperature-Induced Gain Drift in Differential Analog Front-Ends
+# 📘 Knowledge-Base Online resources
 
 ## 🧩 Youtube Channels
 Electronics Circuit Hub:  mainly focus on LT Spice simulation of Electronics 
